@@ -18,6 +18,12 @@ void DisplayBoard(const vector<int> &b){
     }
 }
 
+int voidGetPlayerChoice(int b){
+    string s;
+    getline(cin,s);
+    return stoi(s);
+}
+
 int main(){
     vector<int> board;
     CreateBoard(board);
