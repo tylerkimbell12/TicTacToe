@@ -17,9 +17,15 @@ void DisplayBoard(const vector<int> &b){
         cout<<endl;
     }
 }
+void PlaceMarker(int index, int marker, vector<int> &b){
+    b[index]=marker;
+}
 
 int main(){
     vector<int> board;
     CreateBoard(board);
+    DisplayBoard(board);
+    PlaceMarker(1,1,board);
+    cout<<endl;
     DisplayBoard(board);
 }
