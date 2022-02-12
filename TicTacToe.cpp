@@ -21,6 +21,12 @@ void PlaceMarker(int index, int marker, vector<int> &b){
     b[index]=marker;
 }
 
+int voidGetPlayerChoice(int b){
+    string s;
+    getline(cin,s);
+    return stoi(s);
+}
+
 int main(){
     vector<int> board;
     CreateBoard(board);
