@@ -21,7 +21,7 @@ void PlaceMarker(int index, int marker, vector<int> &b){
     b[index]=marker;
 }
 
-int voidGetPlayerChoice(int b){
+int GetPlayerChoice(){
     string s;
     getline(cin,s);
     return stoi(s);
@@ -31,7 +31,20 @@ int main(){
     vector<int> board;
     CreateBoard(board);
     DisplayBoard(board);
-    PlaceMarker(1,1,board);
-    cout<<endl;
-    DisplayBoard(board);
+    int c;
+    for(int i = 0; i < 4; i++){
+        cout << "Player 1:";
+        c =GetPlayerChoice();
+        PlaceMarker(c,1,board);
+        DisplayBoard(board);
+        cout << "Player 2:";
+        c =GetPlayerChoice();
+        PlaceMarker(c,2,board);
+        DisplayBoard(board);
+
+    }
+        cout << "Player 1:";
+        c =GetPlayerChoice();
+        PlaceMarker(c,1,board);
+        DisplayBoard(board);
 }
